@@ -8,11 +8,11 @@ Private score: 96/359(F1-Score: 0.62702)
  huggingface에 있는 야놀자의 solar 모델(yanolja/EEVE-Korean-Instruct-10.8B-v1.0)을 base model로, train.csv(약 500개 정도의 QA 데이터셋) fine tuning.
 
 ### 2. RAG
- 1. 기존의 base_line 코드에서 pdf loader를 fitz -> pymupdf4llm.to_markdown 사용
+####기존의 base_line 코드에서 pdf loader를 fitz -> pymupdf4llm.to_markdown 사용
   -> pdf 문서를 마크다운 형식으로 불러오기 때문에, 소제목에 ##와 같은 특수기호가 붙어서 더욱 제목, 소단락 기준으로 나누기 쉬워졌다.
   -> meta_data에 자동으로 제목, 소단락 데이터가 들어가진다.
 
- 2. Ensemble Retriever
+####Ensemble Retriever
   -> faiss와 bm25(w. ko_kiwi)를 앙상블 했을 때, 가장 좋은 성능을 보여주었다. weight = [0.7, 0.3]
 
 ### 3. Takeaway
