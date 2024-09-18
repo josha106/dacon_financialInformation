@@ -3,7 +3,7 @@
 
 Public score: 63/359(F1-Score: 0.66333)  
 Private score: 96/359(F1-Score: 0.62702)  
-***
+*** 
 ### 1. Model fine tuning
  huggingface에 있는 야놀자의 solar 모델(yanolja/EEVE-Korean-Instruct-10.8B-v1.0)을 base model로, train.csv(약 500개 정도의 QA 데이터셋) fine tuning.
 ***
